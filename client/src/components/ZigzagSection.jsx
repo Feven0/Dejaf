@@ -1,0 +1,32 @@
+import Reveal from './Reveal';
+import Icon from './Icon';
+
+const colorClasses = {
+  gold: 'from-gold-400/20 to-gold-500/5 text-gold-600',
+  leaf: 'from-leaf-400/20 to-leaf-500/5 text-leaf-600',
+  accent: 'from-accent-400/20 to-accent-500/5 text-accent-600',
+  primary: 'from-primary-400/20 to-primary-500/5 text-primary-700',
+};
+
+// Alternating image/text storytelling block (Who we are / What we do / How we work).
+// Since there's no real photography yet, the "image" side is a soft gradient panel with a
+// large icon — swap in a real photo later by replacing the panel's contents.
+export default function ZigzagSection({ eyebrow, title, text, icon, color = 'gold', reverse = false }) {
+  return (
+    <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
+      <Reveal direction={reverse ? 'right' : 'left'} className={reverse ? 'md:order-2' : 'md:order-1'}>
+        <p className="text-accent-600 font-semibold uppercase text-xs tracking-[0.2em] mb-3">{eyebrow}</p>
+        <h3 className="text-2xl sm:text-3xl font-bold font-heading text-primary-800 mb-4">{title}</h3>
+        <p className="text-primary-600 leading-relaxed text-lg">{text}</p>
+      </Reveal>
+      <Reveal direction={reverse ? 'left' : 'right'} delay={0.1} className={reverse ? 'md:order-1' : 'md:order-2'}>
+        <div
+          className={`relative aspect-[4/3] rounded-3xl bg-gradient-to-br ${colorClasses[color] || colorClasses.gold} border border-primary-100 flex items-center justify-center overflow-hidden`}
+        >
+          <Icon name={icon} className="w-24 h-24 opacity-80" />
+          <div className="absolute -bottom-8 -right-8 w-40 h-40 rounded-full bg-white/40 blur-2xl" />
+        </div>
+      </Reveal>
+    </div>
+  );
+}
