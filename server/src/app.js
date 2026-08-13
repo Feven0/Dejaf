@@ -24,7 +24,14 @@ const { notFound, errorHandler } = require('./middleware/errorHandler');
 
 const app = express();
 
-app.use(cors({ origin: process.env.CLIENT_URL || '*' }));
+// CLIENT_URL may be a single origin or a comma-separated list (e.g. while migrating to a
+// custom domain, both the vercel.app URL and the new domain need to keep working).
+const allowedOrigins = (process.env.CLIENT_URL || '*').split(',').map((o) => o.trim());
+app.use(
+  cors({
+    origin: allowedOrigins.includes('*') ? '*' : allowedOrigins,
+  })
+);
 app.use(express.json());
 app.use(morgan('dev'));
 app.use('/uploads', express.static(path.join(__dirname, '..', 'uploads')));
