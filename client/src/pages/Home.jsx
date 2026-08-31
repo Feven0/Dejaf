@@ -153,23 +153,13 @@ export default function Home() {
             </Reveal>
           </div>
 
-          <div className="relative space-y-6">
+          <div className="relative">
             <Marquee
               items={clients}
-              gap="gap-8"
+              gap="gap-6 sm:gap-8"
               renderItem={(c) => (
-                <div className="group bg-white rounded-2xl border border-primary-100 shadow-md px-8 py-6 flex items-center justify-center hover:-translate-y-1 hover:shadow-xl hover:shadow-accent-500/10 hover:border-accent-200 transition-all duration-300">
-                  <ClientLogo name={c.name} logoUrl={c.logoUrl} />
-                </div>
-              )}
-            />
-            <Marquee
-              items={[...clients].reverse()}
-              reverse
-              gap="gap-8"
-              renderItem={(c) => (
-                <div className="group bg-white rounded-2xl border border-primary-100 shadow-md px-8 py-6 flex items-center justify-center hover:-translate-y-1 hover:shadow-xl hover:shadow-accent-500/10 hover:border-accent-200 transition-all duration-300">
-                  <ClientLogo name={c.name} logoUrl={c.logoUrl} />
+                <div className="group bg-white rounded-2xl border border-primary-100 shadow-md px-8 py-7 sm:px-12 sm:py-9 flex items-center justify-center hover:-translate-y-1 hover:shadow-xl hover:shadow-accent-500/10 hover:border-accent-200 transition-all duration-300">
+                  <ClientLogo name={c.name} logoUrl={c.logoUrl} className="h-14 sm:h-20" />
                 </div>
               )}
             />
