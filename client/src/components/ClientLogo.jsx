@@ -35,7 +35,7 @@ export default function ClientLogo({ name, logoUrl, className = 'h-10 sm:h-12' }
       <img
         src={logoUrl}
         alt={name}
-        className={`${className} w-auto grayscale group-hover:grayscale-0 opacity-70 group-hover:opacity-100 transition-all duration-300 object-contain`}
+        className={`${className} w-auto opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300 object-contain`}
       />
     );
   }
@@ -44,7 +44,7 @@ export default function ClientLogo({ name, logoUrl, className = 'h-10 sm:h-12' }
   const markIcon = marksByName[name];
 
   return (
-    <span className="inline-flex items-center gap-2.5 opacity-70 group-hover:opacity-100 grayscale group-hover:grayscale-0 transition-all duration-300">
+    <span className="inline-flex items-center gap-2.5 opacity-90 group-hover:opacity-100 transition-all duration-300">
       <span
         className={`w-8 h-8 sm:w-9 sm:h-9 shrink-0 rounded-full flex items-center justify-center font-heading font-bold text-sm sm:text-base ${palette.bg} ${palette.text}`}
       >
