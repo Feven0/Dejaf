@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Icon from './Icon';
 
-const DESCRIPTION_PREVIEW_LENGTH = 220;
+const DESCRIPTION_PREVIEW_LENGTH = 110;
 
 export default function ServiceCard({ title, description, icon }) {
   const [isExpanded, setIsExpanded] = useState(false);
