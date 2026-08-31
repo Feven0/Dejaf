@@ -92,6 +92,7 @@ export default function About() {
           }
           icon="users"
           color="accent"
+          image="https://res.cloudinary.com/igggcpow/image/upload/v1788174447/dejaf/umihhbae5zechkofsqh3.jpg"
         />
         <ZigzagSection
           eyebrow="What We Do"
@@ -102,6 +103,7 @@ export default function About() {
           }
           icon="light-bulb"
           color="gold"
+          image="https://res.cloudinary.com/igggcpow/image/upload/v1788174448/dejaf/znmb8sqcssahk6iprta6.jpg"
           reverse
         />
         <ZigzagSection
@@ -113,6 +115,7 @@ export default function About() {
           }
           icon="compass"
           color="leaf"
+          image="https://res.cloudinary.com/igggcpow/image/upload/v1788174449/dejaf/euxx1lvapgmkspemnmnd.jpg"
         />
       </section>
 
