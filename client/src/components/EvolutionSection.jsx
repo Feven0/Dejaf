@@ -4,10 +4,10 @@ import Icon from './Icon';
 import { StaggerGroup, StaggerItem } from './StaggerGroup';
 
 const photos = [
-  'https://picsum.photos/id/3/500/500',
-  'https://picsum.photos/id/4/500/500',
-  'https://picsum.photos/id/6/500/500',
-  'https://picsum.photos/id/36/500/500',
+  'https://res.cloudinary.com/igggcpow/image/upload/v1788173901/dejaf/cna9jngvxg6786qsmvyl.jpg',
+  'https://res.cloudinary.com/igggcpow/image/upload/v1788173902/dejaf/xckzfjp4xitzdrpkuvg4.jpg',
+  'https://res.cloudinary.com/igggcpow/image/upload/v1788173904/dejaf/ewjbgeqkyjlnr8bk05af.jpg',
+  'https://res.cloudinary.com/igggcpow/image/upload/v1788173905/dejaf/n3sj7mmybrnwl2tmuism.jpg',
 ];
 
 const checklist = [

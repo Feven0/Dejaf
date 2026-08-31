@@ -7,7 +7,7 @@ export default function StatementBanner() {
   return (
     <section className="relative h-[420px] sm:h-[480px] overflow-hidden">
       <img
-        src="https://picsum.photos/id/1078/1600/700"
+        src="https://res.cloudinary.com/igggcpow/image/upload/v1788173906/dejaf/sd005rkjl2kcuerzhq3w.jpg"
         alt=""
         className="absolute inset-0 w-full h-full object-cover"
       />

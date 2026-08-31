@@ -134,9 +134,9 @@ const clients = [
   { name: 'Sunrise Capital', logoUrl: '', order: 4 },
 ];
 
-// `image` uses specific hand-picked Picsum Photos IDs (architecture/desks/tech — no
-// identifiable people, no API key/attribution required) so the cards look professional
-// before real photos are uploaded via /admin/programs.
+// `image` values are real Cloudinary-hosted photos (mirroring current production content)
+// rather than a third-party placeholder service — a prior version used Picsum Photos, which
+// turned out to be an unreliable dependency (an outage broke image loading site-wide).
 const programs = [
   {
     title: 'Foundations of Leadership',
@@ -144,7 +144,7 @@ const programs = [
     description: 'Core leadership principles for new and aspiring managers, from delegation to decision-making.',
     duration: '3 days',
     format: 'In-person',
-    image: 'https://picsum.photos/id/1076/600/400',
+    image: 'https://res.cloudinary.com/igggcpow/image/upload/v1788173120/dejaf/wt0jhjdfh8pug9xslzrc.jpg',
     featured: true,
     order: 1,
   },
@@ -154,7 +154,7 @@ const programs = [
     description: 'Advanced strategic thinking, change management, and organizational leadership for senior leaders.',
     duration: '5 days',
     format: 'In-person',
-    image: 'https://picsum.photos/id/1048/600/400',
+    image: 'https://res.cloudinary.com/igggcpow/image/upload/v1788173279/dejaf/wumvopgcp8shusdnnnsl.jpg',
     featured: false,
     order: 2,
   },
@@ -164,7 +164,7 @@ const programs = [
     description: 'A practical overview of core banking operations, credit risk, and regulatory compliance.',
     duration: '4 days',
     format: 'In-person',
-    image: 'https://picsum.photos/id/249/600/400',
+    image: 'https://res.cloudinary.com/igggcpow/image/upload/v1788173281/dejaf/be9c4cdzgtypcnzoqzw3.jpg',
     featured: true,
     order: 3,
   },
@@ -174,7 +174,7 @@ const programs = [
     description: 'Sharpen negotiation techniques for client relationships, credit terms, and vendor contracts.',
     duration: '2 days',
     format: 'In-person',
-    image: 'https://picsum.photos/id/201/600/400',
+    image: 'https://res.cloudinary.com/igggcpow/image/upload/v1788173298/dejaf/wn1zxtfmhrrweldrlsm6.jpg',
     featured: true,
     order: 4,
   },
@@ -184,7 +184,7 @@ const programs = [
     description: 'Best practices for managing microfinance operations, portfolio quality, and client outreach.',
     duration: '3 days',
     format: 'Hybrid',
-    image: 'https://picsum.photos/id/20/600/400',
+    image: 'https://res.cloudinary.com/igggcpow/image/upload/v1788174015/dejaf/q4kdwmzcirnqgt4anigg.jpg',
     featured: false,
     order: 5,
   },
@@ -194,7 +194,7 @@ const programs = [
     description: 'Recruitment, performance management, and employee relations for today’s workplace.',
     duration: '3 days',
     format: 'In-person',
-    image: 'https://picsum.photos/id/366/600/400',
+    image: 'https://res.cloudinary.com/igggcpow/image/upload/v1788173124/dejaf/tid0xk4vxogzdwkty8qk.jpg',
     featured: false,
     order: 6,
   },
@@ -204,7 +204,7 @@ const programs = [
     description: 'Build a healthy, productive workplace culture through practical HR interventions.',
     duration: '2 days',
     format: 'In-person',
-    image: 'https://picsum.photos/id/48/600/400',
+    image: 'https://res.cloudinary.com/igggcpow/image/upload/v1788173301/dejaf/le2eximenq8bborah54o.jpg',
     featured: true,
     order: 7,
   },
@@ -214,7 +214,7 @@ const programs = [
     description: 'Practical communication techniques for teams, client-facing staff, and managers.',
     duration: '2 days',
     format: 'In-person',
-    image: 'https://picsum.photos/id/180/600/400',
+    image: 'https://res.cloudinary.com/igggcpow/image/upload/v1788173303/dejaf/r3mq4vhwezjbwiaajoal.jpg',
     featured: true,
     order: 8,
   },
@@ -224,7 +224,7 @@ const programs = [
     description: 'Deliver consistent, high-quality customer experiences across every touchpoint.',
     duration: '2 days',
     format: 'In-person',
-    image: 'https://picsum.photos/id/367/600/400',
+    image: 'https://res.cloudinary.com/igggcpow/image/upload/v1788173306/dejaf/shbzb4zgi8eihqjsoxsy.jpg',
     featured: false,
     order: 9,
   },
@@ -234,7 +234,7 @@ const programs = [
     description: 'Understand environmental, social, and governance principles and how to apply them operationally.',
     duration: '2 days',
     format: 'Hybrid',
-    image: 'https://picsum.photos/id/60/600/400',
+    image: 'https://res.cloudinary.com/igggcpow/image/upload/v1788174016/dejaf/cm8okqdyz7iunnhbeytz.jpg',
     featured: true,
     order: 10,
   },
@@ -244,7 +244,7 @@ const programs = [
     description: 'A practical introduction to digital tools and innovation practices for traditional organizations.',
     duration: '3 days',
     format: 'Hybrid',
-    image: 'https://picsum.photos/id/119/600/400',
+    image: 'https://res.cloudinary.com/igggcpow/image/upload/v1788174018/dejaf/ufgyq4ugsel2xg9qbmtg.jpg',
     featured: false,
     order: 11,
   },
