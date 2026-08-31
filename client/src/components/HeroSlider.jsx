@@ -53,7 +53,7 @@ export default function HeroSlider({ settings }) {
         }}
       />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-24 md:py-32 grid md:grid-cols-2 gap-10 items-center min-h-[560px]">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-20 md:py-24 grid md:grid-cols-2 gap-10 items-center min-h-[560px]">
         <AnimatePresence mode="wait">
           <motion.div
             key={index}

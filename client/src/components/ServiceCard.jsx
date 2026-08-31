@@ -1,7 +1,17 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Icon from './Icon';
 
+const DESCRIPTION_PREVIEW_LENGTH = 220;
+
 export default function ServiceCard({ title, description, icon }) {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const isLongDescription = description.length > DESCRIPTION_PREVIEW_LENGTH;
+  const displayedDescription =
+    isLongDescription && !isExpanded
+      ? `${description.slice(0, DESCRIPTION_PREVIEW_LENGTH).trimEnd()}...`
+      : description;
+
   return (
     <motion.div
       whileHover={{ y: -8, scale: 1.02 }}
@@ -13,7 +23,17 @@ export default function ServiceCard({ title, description, icon }) {
         <Icon name={icon} />
       </div>
       <h3 className="relative text-lg font-heading font-semibold text-primary-800 mb-2">{title}</h3>
-      <p className="relative text-sm text-primary-600 leading-relaxed">{description}</p>
+      <p className="relative text-sm text-primary-600 leading-relaxed">{displayedDescription}</p>
+      {isLongDescription && (
+        <button
+          type="button"
+          onClick={() => setIsExpanded((expanded) => !expanded)}
+          className="relative mt-3 text-sm font-semibold text-accent-600 hover:text-accent-700"
+          aria-expanded={isExpanded}
+        >
+          {isExpanded ? 'Less' : 'More'}
+        </button>
+      )}
     </motion.div>
   );
 }
