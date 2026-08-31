@@ -1,20 +1,9 @@
 const multer = require('multer');
-const path = require('path');
-const fs = require('fs');
 
-const uploadDir = path.join(__dirname, '..', '..', 'uploads');
-if (!fs.existsSync(uploadDir)) {
-  fs.mkdirSync(uploadDir, { recursive: true });
-}
-
-const storage = multer.diskStorage({
-  destination: (req, file, cb) => cb(null, uploadDir),
-  filename: (req, file, cb) => {
-    const ext = path.extname(file.originalname);
-    const base = path.basename(file.originalname, ext).replace(/[^a-z0-9]/gi, '-').toLowerCase();
-    cb(null, `${base}-${Date.now()}${ext}`);
-  },
-});
+// Files are kept in memory and streamed straight to Cloudinary (see uploadController.js) —
+// never written to local disk, since Render's free-tier filesystem is ephemeral and wipes
+// on every redeploy.
+const storage = multer.memoryStorage();
 
 function fileFilter(req, file, cb) {
   const allowed = ['image/jpeg', 'image/png', 'image/webp', 'image/svg+xml'];
